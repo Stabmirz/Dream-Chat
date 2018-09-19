@@ -9,38 +9,33 @@ function mountLoginScreen(){
        container.classList.add('Login-screen') ;
        //to create in center
        container.innerHTML = `
-       <div class="box">
-       <div class="logo">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Messages_Yosemite.svg/2000px-Messages_Yosemite.svg.png" height="130" width="130" alt="logo">
-           <div class="centered">Dream Chat</div>
-       </div>
-       <div class="shadow"></div>
-       <div class="login">
-           <div class="email">
-               <form>
-                   <input type="text" id="uname" placeholder="Username">
-               </form>
-           </div>
-           <br>
-           <div class="pass">
-               <form>
-                  <input type="text" id="pass" placeholder="Password">
-               </form>
-           </div>
-             <a href="#" class="forgot">forgot password?</a>
-       </div>
-       <div class="shadow"></div>
-       <div class="icon">
-           <div id="facebook-login-btn"><img src="http://www.iconarchive.com/download/i59749/hopstarter/rounded-square/Social-Network-Facebook.ico" alt="facebook"/></div>
-           <div id="google-login-btn"><img src="http://wfarm1.dataknet.com/static/resources/icons/set1/a69848bc11cf9.png" alt="gmail"/></div>
-       </div>
-       <div class="shadow"></div>
-       <div class="submit">
-           <input type="submit" style="background-color: rgb(255, 102, 0); height: 70px;" value="Sign In"/>
-           <input type="submit" style="background-color:rgb(255, 102, 0); border-radius: 4px 4px 14px 14px; height: 70px;" value="Sign Up"/>
-       </div>
-       
-   </div>
+        <div class="box">
+            <div class="logo">
+               <img id="logo" src="https://lh3.googleusercontent.com/-L9Ny7IurJC8/Vjol6uV8uhI/AAAAAAAAIX0/IEf03eJzgZU/w318-h318-n/2%2BPrestige.png" alt="logo">
+            </div>
+            <div class="login">
+                <div class="email">
+                    <form>
+                       <input type="text" id="uname" placeholder="Username">
+                    </form>
+                </div>
+                <br>
+                <div class="pass">
+                    <form>
+                        <input type="text" id="pass" placeholder="Password">
+                    </form>
+                </div>
+                <a href="#" class="forgot">forgot password?</a>
+            </div>
+            <div class="icon">
+                <div id="facebook-login-btn"><img src="http://www.iconarchive.com/download/i59749/hopstarter/rounded-square/Social-Network-Facebook.ico" alt="facebook"/></div>
+                <div id="google-login-btn"><img src="http://wfarm1.dataknet.com/static/resources/icons/set1/a69848bc11cf9.png" alt="gmail"/></div>
+            </div>
+            <div class="join">
+                <input id="sign-in" type="submit" value="Sign In"/>
+                <input id="sign-up" type="submit" value="Sign Up"/>
+            </div>   
+        </div>
        `;
     
        return container;

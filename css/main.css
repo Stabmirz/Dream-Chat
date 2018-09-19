@@ -45,42 +45,39 @@ body{
 
 .box{
     display: flex;
-    border: 1px solid rgb(255, 102, 0);
-    height: 97vh;
-    width: 93vw;
-    margin-bottom: 1vh;
     border-radius: 15px;
     flex-direction: column;
     justify-content: space-between;
-    background-color:  rgb(12, 12, 12);
-    box-shadow: 14px 11px 50px grey;
+    height: 100vh;
+    width: 100vw;
+    background-image:url('http://www.greece-web.com/wp-content/uploads/2014/08/Caldera-Oia-sunset-boat-tour.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo{
     display: flex;
     justify-content: center;
+    flex: 1;
     margin-top: 10vh;
-    text-align: center;
 }
 
-.centered {
-    position: fixed;
-    color: black;
-    top: 107px;
-    left: 133px;
-    font-family: cursive;
-    font-size: 20px;
-    font-weight: bolder;
-    text-shadow: 0 -1px 0 white, 0 1px 0 #fff;
+img[id="logo"]{
+    height: 130px;
+    width: 130px;
 }
 
 .login{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 2;
     margin-left: 8vw;
+    margin-top: 5vh;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0 -1px 0 rgb(255, 102, 0), 0 1px 0 #fff;
+    text-shadow: 0 -1px 0 white, 0 1px 0 #fff;
 }
 
 input[id="uname"]{
@@ -89,31 +86,36 @@ input[id="uname"]{
     margin-left: 6.2vw;
     font-style: italic;
     font-size: 18px;
-    border: 1px solid rgb(255, 102, 0); 
+    border: 1px solid black; 
     width: 70%;
+    flex: 1;
 }
 
-input[id = "pass"]{
+input[id ="pass"]{
     border: 0px;
     padding: 8px;
     margin-left: 6.3vw;
     font-style: italic;
     font-size: 18px;
-    border: 1px solid rgb(255, 102, 0); 
+    border: 1px solid black; 
     width: 70%;
+    flex:1;
 }
 
 .forgot{
     display: flex;
     justify-content: flex-end;
-    margin-right: 60px;
+    flex: 1;
+    margin-right: 55px;
     margin-top: 10px;
-    color: whitesmoke;
+    color: white;
+    font-size: 18px;
 }
 
 .icon{
     display: flex;
     justify-content: space-around;
+    flex: 1;
 }
 
 img[alt="facebook"]{
@@ -126,99 +128,123 @@ img[alt="gmail"]{
     height: 75px ;
 }
 
-.shadow {
-  background:rgb(255, 102, 0);
-  border-radius: 12px 12px 12px 12px;
-  box-shadow: 0 0 20px 10px #000;
-  height: 12px;
-  margin: 30px auto;
-  opacity: 0.2;
-  width: 270px;
-}
-
-.submit{
+.join{
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    flex: 1;
+}
+
+input[id="sign-in"]{
+    background-color: transparent;
+    height: 70px;
+    color:white;
+    font-size: 26px;
+}
+
+input[id="sign-up"]{
+    background-color: transparent;
+    border-radius: 4px 4px 14px 14px;
+    height: 70px;
+    font-size: 26px;
+    color: white;
 }
 
 .chatBody{
     margin: 0;
-    border: 2px solid black;
     display: flex;
     justify-content: center;
 }
+
 .header{
-    border: 1px solid black;
     height: 8vh;
-    width: 98vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
-    background-color: rgb(74, 139, 192);;
+    background-color: rgb(22, 93, 104);
     color: black;
 }
+
 .user{
- flex: 1;
- display: flex;
- justify-content: center;
- align-items: center;
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
 }
+
 .user .userName{
-    flex: 1;
+    flex: 3;
     font-size: 40px;
     font-weight: bold;
+    color: #17d1d1;
 }
+
 .user .userImage{
     flex: 1;
 }
+
 .user .userImage input{
     height: 4vh;
     width: 6vw;
+    border: 1px solid #17d1d1;
+    border-radius: 50%;
  
 }
+
 .callIcon{
- flex: 1;
+ flex: 3;
  display: flex;
  justify-content: space-around;
  align-items: center;
 }
+
 .callIcon .audio input{
     height: 4vh;
     width: 6vw;
 }
+
 .callIcon .video input{
     height: 4vh;
     width: 6vw;
 }
+
  .callIcon .sign-out input{
     height: 4vh;
-    width: 6vw;
+    width: 7vw;
 }
-.chatBody{
-    border:1px solid black;
-    height: 85vh;
-    width: 98vw;
+
+.chat-messages{
+    height: 86vh;
+    width: 100vw;
     background-image: url("http://3.bp.blogspot.com/-V078fQ5yaUM/WHuApNvZ9JI/AAAAAAAAB5Q/ViDV7-5m8eUfLUjZkkVuh-0VsUo8ZIb1wCHM/s1600/hd-beach-wallpaper-png.jpg");
-    color: white;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+    color:white;
+    font-size: 24px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .footer{
-    border:1px solid black;
-    width: 98vw;
+    width: 100vw;
     height: 6vh;
     display: flex;
     justify-content: center;
-
 }
-input{
-    flex: 3;
-    color: black;
+
+input[id="chat-input-msg"]{
+    flex: 4;
+    color: white;
+    background-color: rgb(22, 93, 104);
     font-size: 18px;
 }
+
 button{
     flex: 1;
-    color: black;
-    font-size: 18px;
+    background-color:  rgb(22, 93, 104);
+}
+
+img[id="send"]{
+    height: 5vh;
+    width: 50%;
 }
