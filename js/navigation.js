@@ -18,9 +18,8 @@ function navigate(screen) {
             mountChatScreen();
             break;
 
-        default: 
-           mount404Screen();
+        default:
+            $('root').html('');
             break;
-
     }
 }

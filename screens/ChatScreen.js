@@ -19,19 +19,19 @@ function ChatScreen() {
             <div class="header">
                 <div class="user">
                     <div class="userImage">
-                        <input type="image" src="http://www.stickpng.com/assets/images/585e4bcdcb11b227491c3396.png" alt="">
+                        <input type="image" src="../images/user.png" alt="">
                     </div>
                 <div class="userName">${window.user.email.split('@')[0]}</div>
             </div>
             <div class="callIcon">
                 <div class="audio">
-                    <input type="image" src="https://miatosf.com/wp-content/uploads/2017/08/phone-call-icon-2-blue.png" alt="">
+                    <input type="image" src="../images/audio.png" alt="">
                 </div>
                 <div class="video">
-                    <input type="image" src="https://iconsplace.com/wp-content/uploads/_icons/40e0d0/256/png/video-call-icon-17-256.png" alt="">
+                    <input type="image" src="../images/video.png" alt="">
                 </div>
                 <div class="sign-out">
-                    <input type="image" src="https://www.smartnation.com.bn/uploads/challenge_featured_image/1-100/8/1477290657_switch-turn-off-icon.png" alt="">
+                    <input type="image" src="../images/sign-out.png" alt="">
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@ function ChatScreen() {
         <div class="footer">
             <input id="chat-input-msg" type="text" value="" placeholder="    write your massage"/>
             <button id="chat-send-btn">
-                <img id ="send" src="https://cdn4.iconfinder.com/data/icons/message-4-flat/512/26_Send-512.png"/>
+                <img id ="send" src="../images/send.png"/>
             </button>
         </div>
     </div>
@@ -62,6 +62,7 @@ function initChatScreenListeners(messages) {
         })
 
         $("#chat-input-msg").val('')
+        scroll();
     }
 
     $('.sign-out').on('click', signOut);
@@ -85,4 +86,13 @@ function initChatScreenListeners(messages) {
             $('#chat-messages').append(Messages(msg));
         }
     });
+
+    
+
+    function scroll(){
+        let height = $('#chat-messages')[0].scrollHeight;
+
+        $('#chat-messages').scrollTop(height);
+
+    }
 }

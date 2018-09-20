@@ -22,6 +22,17 @@ function logInWithGoogle() {
         alert(errorMessage)
     });
 }
+
+function signUpWithEmailAndPassword(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      
+      alert(errorMessage);
+    });
+  }
+
 function createPersistantSession(authenticate = () => console.log('no aothentication passed to persistant session')){
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
     .then(authenticate)
