@@ -2,7 +2,7 @@ css/*
 images/*
 js/*
 Library/*
-node_modules/*
+node_modules
 index.html
 src/*
 package-lock.json

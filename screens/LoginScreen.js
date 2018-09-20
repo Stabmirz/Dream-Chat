@@ -15,21 +15,17 @@ function mountLoginScreen(){
             </div>
             <div class="login">
                 <div class="email">
-                    <form>
-                       <input type="text" id="uname" placeholder="Username">
-                    </form>
+                    <input type="text" id="uname" placeholder="Username">
                 </div>
                 <br>
                 <div class="pass">
-                    <form>
-                        <input type="password" id="pass" placeholder="Password">
-                    </form>
+                    <input type="password" id="pass" placeholder="Password">
                 </div>
                 <a href="#" class="forgot">forgot password?</a>
             </div>
             <div class="icon">
-                <div id="facebook-login-btn"><img src="../images/facebook.png" alt="facebook"/></div>
-                <div id="google-login-btn"><img src="../images/google.png" alt="gmail"/></div>
+                <div><img id="facebook-login-btn" src="../images/facebook.png" alt="facebook"/></div>
+                <div><img id="google-login-btn" src="../images/google.png" alt="gmail"/></div>
             </div>
             <div class="join">
                 <input id="sign-in" type="submit" value="Sign In"/>
