@@ -15,7 +15,7 @@ function mountLoginScreen(){
             </div>
             <div class="login">
                 <div class="email">
-                    <input type="text" id="uname" placeholder="Username">
+                    <input type="text" id="email" placeholder="Email">
                 </div>
                 <br>
                 <div class="pass">
@@ -41,6 +41,15 @@ function mountLoginScreen(){
         $('#google-login-btn').on('click',  function(){
             createPersistantSession(logInWithGoogle);
         })
+
+        $('#facebook-login-btn').on('click',  function(){
+            createPersistantSession(logInWithFacebook);
+        })
+
+        $('#sign-in').on('click',  function(){
+            createPersistantSession(loginWithEmainAndPassword);
+        })
+
         $('#sign-up').on('click',  function(){
             navigate('sign-up-screen');
         })

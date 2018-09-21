@@ -20,9 +20,6 @@ function mountSignUpScreen(){
                 <div class="email">
                     <input type="text" id="email" placeholder="Email">
                 </div>
-                <div class="user-name">
-                    <input type="text" id="user-name" placeholder="Username">
-                </div>
                 <div class="password">
                     <input type="password" id="password" value="" placeholder="Password">
                 </div>

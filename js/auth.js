@@ -1,8 +1,16 @@
-var provider = new firebase.auth.GoogleAuthProvider();
+const facebookProvider = new firebase.auth.FacebookAuthProvider();
+const googleProvider = new firebase.auth.GoogleAuthProvider();
 
 
 //Function to log in with Google
+function logInWithFacebook() {
+    socialLogin(facebookProvider)
+}
 function logInWithGoogle() {
+    socialLogin(googleProvider)
+}
+
+function socialLogin(provider){
     firebase.auth().signInWithPopup(provider).then(function (result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
@@ -23,6 +31,7 @@ function logInWithGoogle() {
     });
 }
 
+
 function signUpWithEmailAndPassword(email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
       // Handle Errors here.
@@ -31,7 +40,20 @@ function signUpWithEmailAndPassword(email, password) {
       
       alert(errorMessage);
     });
-  }
+}
+
+function loginWithEmainAndPassword(){
+    let email = $('#email').val()
+    let password = $('#pass').val()
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        alert(errorMessage)
+      });
+    
+}
 
 function createPersistantSession(authenticate = () => console.log('no aothentication passed to persistant session')){
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)

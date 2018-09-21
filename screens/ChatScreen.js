@@ -85,9 +85,29 @@ function initChatScreenListeners(messages) {
             console.log(msg);
             $('#chat-messages').append(Messages(msg));
         }
-    });
+    let currentPerson = '';
 
-    
+       for (let mid in msgs) {
+           let msg = msgs[mid];
+           let showUsername = true;
+
+           if(user.email === msg.email){
+               currentPerson = msg.email;
+               showUsername = false;
+           }
+           else if(currentPerson === msg.email){
+               showUsername = false;
+           }
+           else {
+               currentPerson = msg.email;
+           }
+           // console.log(msg);
+           $('#chat_messages').append(Messages(msg,showUsername));
+       }
+
+       scroll();
+
+    });
 
     function scroll(){
         let height = $('#chat-messages')[0].scrollHeight;

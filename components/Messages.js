@@ -1,17 +1,25 @@
-function Messages(msg){
+function Messages(msg, showUsername) {
     let container = document.createElement('div');
-    let isMe = msg.uid === user.uid;
+    let isMe = msg.email === user.email;
+
     container.style.textAlign = isMe ? 'right' : 'left';
-    container.style.margin = '10px 20px;'
+    container.style.margin = '20px';
 
     container.innerHTML = `
-    ${!isMe ?
-    `<div class="msg-name">${msg.email.split('@')[0]}</div>`
-    :''}
-
-    <div class="${isMe ? 'msg-bubble-right' : 'msg-bubble-left'}">
-        ${msg.text}
-    </div>
-    `
+      ${showUsername ?
+            `<div class="msg-name">
+               ${msg.email.split('@')[0]}
+            </div>`
+            : ''}
+ 
+            <div style="display: flex; justify-content: ${isMe ? 'flex-end' : 'flex-start'}">
+            ${!isMe ? `<img style="border-radius: 50%;background-color: #000;" src="${msg.photoURL ? msg.photoURL : './images/logo.png'}" width="50px" height="50px" />`
+            : ''
+        }
+            <div class="bubble ${isMe ? 'msg-bubble-right' : 'msg-bubble-left'}">
+            <div>${msg.text}</div>
+            <div class="msg-date-time">${moment(msg.date).format('MM/DD/YYYY hh:mm')}</div>
+        </div>
+        `
     return container;
 }
