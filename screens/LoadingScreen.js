@@ -13,11 +13,14 @@ function loadingScreen(){
    container.classList.add('Loading-screen') ;
    //to create in center
    container.innerHTML = `
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
-   `;
+       <div class="name">W</div>
+       <div class="name">E</div>
+       <div class="name">L</div>
+       <div class="name">C</div>
+       <div class="name">O</div>
+       <div class="name">M</div>
+       <div class="name">E</div>
+       `;
 
    return container;
 }

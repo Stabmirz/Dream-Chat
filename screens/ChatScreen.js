@@ -3,7 +3,7 @@ function mountChatScreen() {
     let messages = db.ref('messages/');
 
     $('#root').html(ChatScreen());
-    
+
     initChatScreenListeners(messages);
 }
 
@@ -80,39 +80,31 @@ function initChatScreenListeners(messages) {
         let msgs = snapshot.val();
 
         $('#chat-messages').html('');
+        let currentPerson = '';
+
         for (let mid in msgs) {
-            let msg = msgs[mid];
-            console.log(msg);
-            $('#chat-messages').append(Messages(msg));
+          let msg = msgs[mid];
+          let showUsername = true;
+    
+          if (user.email === msg.email) {
+            currentPerson = msg.email;
+            showUsername = false;
+          }
+          else if (currentPerson === msg.email) {
+            showUsername = false;
+          }
+          else {
+            currentPerson = msg.email;
+          }
+    
+          $('#chat-messages').append(Messages(msg, showUsername));
         }
-    let currentPerson = '';
-
-       for (let mid in msgs) {
-           let msg = msgs[mid];
-           let showUsername = true;
-
-           if(user.email === msg.email){
-               currentPerson = msg.email;
-               showUsername = false;
-           }
-           else if(currentPerson === msg.email){
-               showUsername = false;
-           }
-           else {
-               currentPerson = msg.email;
-           }
-           // console.log(msg);
-           $('#chat_messages').append(Messages(msg,showUsername));
-       }
-
-       scroll();
-
+        
+        scroll();
     });
-
-    function scroll(){
-        let height = $('#chat-messages')[0].scrollHeight;
-
-        $('#chat-messages').scrollTop(height);
-
-    }
 }
+
+    function scroll() {
+        let height = $('#chat-messages')[0].scrollHeight;
+         $('#chat-messages').scrollTop(height);
+    }

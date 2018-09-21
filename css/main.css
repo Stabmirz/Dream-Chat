@@ -1,20 +1,21 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 .Loading-screen {
+  background: url("../images/background1.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Loading-screen div {
-  height: 40px;
-  width: 5px;
-  background-color: black;
-  margin: 5px;
-  border-radius: 10px;
+.name {
+  font-size: 60px;
+  font-weight: bold;
+  color: #fff;
   animation: bar 700ms ease infinite alternate-reverse;
 }
 
@@ -30,29 +31,36 @@ body {
   animation-delay: 600ms;
 }
 
+.Loading-screen div:nth-child(5) {
+  animation-delay: 800ms;
+}
+
+.Loading-screen div:nth-child(6) {
+  animation-delay: 1000ms;
+}
+
+.Loading-screen div:nth-child(7) {
+  animation-delay: 1200ms;
+}
+
 @keyframes bar {
   from {
     /* transform: scale(0.5); */
-    height: 50px;
+    height: 80px;
   }
   to {
     /* transform: scale(1); */
-    height: 150px;
+    height: 180px;
   }
-}
-body {
-  margin: 0;
-  padding: 0;
 }
 
 .box {
   display: flex;
-  /* border-radius: 15px; */
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
   width: 100vw;
-  background-image: url("../images/background1.jpg");
+  background-image: url("../images/background2.jpg");
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
   background-position: center;
   background-size: cover;
@@ -188,6 +196,11 @@ input[id=sign-up] {
   margin: 0;
   display: flex;
   justify-content: center;
+  background-image: url("../images/background3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
 
 .header {
@@ -195,8 +208,8 @@ input[id=sign-up] {
   width: 100vw;
   display: flex;
   justify-content: center;
-  background-color: #165d68;
-  color: black;
+  background-color: transparent;
+  border: 1px solid white;
 }
 
 .user {
@@ -250,13 +263,8 @@ input[id=sign-up] {
 .chat-messages {
   height: 86vh;
   width: 100vw;
-  background-image: url("../images/background2.jpg");
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
   color: white;
   font-size: 24px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   overflow-y: auto;
 }
 
@@ -270,13 +278,13 @@ input[id=sign-up] {
 input[id=chat-input-msg] {
   flex: 4;
   color: white;
-  background-color: #165d68;
+  background-color: transparent;
   font-size: 18px;
 }
 
 button {
   flex: 1;
-  background-color: #165d68;
+  background-color: transparent;
 }
 
 img[id=send] {
@@ -311,12 +319,12 @@ img[id=send] {
   width: 0;
   height: 0;
   border-top: 0px solid transparent;
-  border-right: 16px solid #fff;
+  border-right: 16px solid #165d68;
   border-bottom: 20px solid transparent;
 }
 
 .msg-bubble-left .msg-date-time {
-  font-size: 8px;
+  font-size: 10px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -347,7 +355,7 @@ img[id=send] {
   width: 0;
   height: 0;
   border-top: 0px solid transparent;
-  border-left: 16px solid #ffeb3b;
+  border-left: 16px solid #165d68;
   border-bottom: 20px solid transparent;
 }
 
@@ -362,7 +370,7 @@ img[id=send] {
 }
 
 .msg-bubble-right .msg-date-time {
-  font-size: 8px;
+  font-size: 10px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -375,7 +383,7 @@ img[id=send] {
   justify-content: space-between;
   height: 100vh;
   width: 100vw;
-  background-image: url("../images/background3.jpg");
+  background-image: url("../images/background4.jpg");
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
   background-position: center;
   background-size: cover;
@@ -442,11 +450,6 @@ input[id=password-confirmation] {
   font-size: 18px;
   border: 1px solid black;
   width: 70%;
-}
-
-input[id=myInput] {
-  color: white;
-  font-size: 18px;
 }
 
 button[id=sign-up] {
