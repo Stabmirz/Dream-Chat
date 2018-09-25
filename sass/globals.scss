@@ -1,0 +1,42 @@
+$primary-color: #e804c4a8;
+$secondary-color: #27e227b8;
+$accent-color: #470303;
+$text-color: white;
+
+body {
+   margin: 0;
+   padding: 0;
+ }
+
+ %flex-center {
+   display: flex;
+   justify-content: center;
+ }
+
+ %user-pass {
+   background-color: #47169e96;
+   font-family: "Montserrat", sans-serif;
+   border-bottom: 1px solid black;
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   font-size: 19px;
+   color: white;
+   height: 7vh;
+ }
+
+ %sign_in_up {
+   flex: 1;
+   font-size: 19px;
+   font-weight: bold;
+   font-family: "Montserrat", sans-serif;
+ }
+
+ %email_pass {
+   font-family: "Montserrat", sans-serif;
+   border-bottom: 1px solid black;
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   font-size: 19px;
+ }
