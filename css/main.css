@@ -193,8 +193,17 @@ input[id=sign-up] {
   height: 70px;
   font-size: 26px;
   color: white;
+  animation: background 1s ease infinite;
 }
 
+@keyframes background {
+  0% {
+    background-image: linear-gradient(to top, #09203f);
+  }
+  100% {
+    background-image: linear-gradient(to top, #537895);
+  }
+}
 .sign-up-box {
   display: flex;
   flex-direction: column;
