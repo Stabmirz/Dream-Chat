@@ -11,7 +11,7 @@ function mountLoginScreen(){
        container.innerHTML = `
         <div class="box">
             <div class="logo">
-               <img id="logo" src="../images/login.png" alt="logo">
+               <img id="logo" src="./images/login.png" alt="logo">
             </div>
             <div class="login">
                 <div class="email">
@@ -24,8 +24,8 @@ function mountLoginScreen(){
                 <a href="#" class="forgot">forgot password?</a>
             </div>
             <div class="icon">
-                <div><img id="facebook-login-btn" src="../images/facebook.png" alt="facebook"/></div>
-                <div><img id="google-login-btn" src="../images/google.png" alt="gmail"/></div>
+                <div><img id="facebook-login-btn" src="./images/facebook.png" alt="facebook"/></div>
+                <div><img id="google-login-btn" src="./images/google.png" alt="gmail"/></div>
             </div>
             <div class="join">
                 <input id="sign-in" type="submit" value="Sign In"/>

@@ -19,19 +19,19 @@ function ChatScreen() {
             <div class="header">
                 <div class="user">
                     <div class="userImage">
-                        <input type="image" src="../images/user.png" alt="">
+                        <input type="image" src="./images/user.png" alt="">
                     </div>
                 <div class="userName">${window.user.email.split('@')[0]}</div>
             </div>
             <div class="callIcon">
                 <div class="audio">
-                    <input type="image" src="../images/audio.png" alt="">
+                    <input type="image" src="./images/audio.png" alt="">
                 </div>
                 <div class="video">
-                    <input type="image" src="../images/video.png" alt="">
+                    <input type="image" src="./images/video.png" alt="">
                 </div>
                 <div class="sign-out">
-                    <input type="image" src="../images/sign-out.png" alt="">
+                    <input type="image" src="./images/sign-out.png" alt="">
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@ function ChatScreen() {
         <div class="footer">
             <input id="chat-input-msg" type="text" value="" placeholder="    write your massage"/>
             <button id="chat-send-btn">
-                <img id ="send" src="../images/send.png"/>
+                <img id ="send" src="./images/send.png"/>
             </button>
         </div>
     </div>
