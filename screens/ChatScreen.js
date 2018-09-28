@@ -15,13 +15,12 @@ function ChatScreen() {
     container.classList.add('chat-screen');
     container.innerHTML = `
     <div class="chatBody">
-        <div class="chatBox">
-            <div class="header">
-                <div class="user">
-                    <div class="userImage">
-                        <input type="image" src="./images/user.png" alt="">
-                    </div>
-                <div class="userName">${window.user.email.split('@')[0]}</div>
+        <div class="header">
+            <div class="user">
+                <div class="userImage">
+                 <input type="image" src="./images/user.png" alt="">
+                </div>
+                <div class="userName">${window.user.email.split('@')[0]}</div>   
             </div>
             <div class="callIcon">
                 <div class="audio">

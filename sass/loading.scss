@@ -10,38 +10,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    .name {
+        font-size: 60px;
+        font-weight: bold;
+        color: $text-color;
+        animation: bar 700ms ease infinite alternate-reverse;
+    
+        &:nth-child(2) {
+        animation-delay: 200ms;
+        }
+        &:nth-child(4) {
+        animation-delay: 400ms;
+        }
+        &:nth-child(5) {
+        animation-delay: 600ms;
+        }
+        &:nth-child(6) {
+        animation-delay: 800ms;
+        }
+        &:nth-child(7) {
+        animation-delay: 1000ms;
+        }
+        &:nth-child(8) {
+        animation-delay: 1200ms;
+        }
+    }  
 }
   
-.name {
-    font-size: 60px;
-    font-weight: bold;
-    color: #fff;
-    animation: bar 700ms ease infinite alternate-reverse;
-}
-  
-.Loading-screen div:nth-child(2) {
-    animation-delay: 200ms;
-}
-  
-  .Loading-screen div:nth-child(3) {
-    animation-delay: 400ms;
-}
-  
-.Loading-screen div:nth-child(4) {
-    animation-delay: 600ms;
-}
-  
-.Loading-screen div:nth-child(5) {
-    animation-delay: 800ms;
-}
-  
-.Loading-screen div:nth-child(6) {
-    animation-delay: 1000ms;
-}
-  
-.Loading-screen div:nth-child(7) {
-    animation-delay: 1200ms;
-}
+
   
 @keyframes bar {
     from {

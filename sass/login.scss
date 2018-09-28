@@ -1,33 +1,108 @@
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @extend %flex-space-between;
     height: 100vh;
     width: 100vw;
     background-image: url("../images/background2.jpg");
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    @extend %background;
+
+   .logo {
+        @extend %flex-center;
+        flex: 1;
+        margin-top: 10vh;
+        img[id=logo] {
+            height: 130px;
+            width: 130px;
+        }
+
+        #logo {
+            animation: logo 10s infinite;
+        }
+          
+    }
+
+    .login {
+        @extend %flex-space-between;
+        flex: 2;
+        margin-left: 8vw;
+        margin-top: 10vh;
+        font-family: Arial, Helvetica, sans-serif;
+
+        input[id=email] {
+            padding: 8px;
+            margin-left: 6.2vw;
+            font-style: italic;
+            font-size: 18px;
+            border: 1px solid black;
+            width: 70%;
+            flex: 1;
+        }
+
+        input[id=pass] {
+            padding: 8px;
+            margin-left: 6.3vw;
+            @extend %style;
+            width: 70%;
+            flex: 1;
+        }
+
+        .forgot {
+            display: flex;
+            justify-content: flex-end;
+            flex: 1;
+            margin-right: 18vw;
+            margin-top: 2vh;
+            color: $text-color;;
+            font-size: 20px;
+        }
+    }
+
+    .icon {
+        @extend %flex-space-around;
+        flex: 1;
+
+        img[id=facebook-login-btn] {
+            width: 75px;
+            height: 75px;
+        }
+          
+        #facebook-login-btn {
+            animation: facebook 10s infinite;
+        }
+
+        img[id=google-login-btn] {
+            width: 75px;
+            height: 75px;
+        }
+
+        #google-login-btn {
+            animation: google 10s infinite;
+        }
+          
+    }
+
+    .join {
+        @extend %flex-column;
+        flex: 1;
+    
+        input[id=sign-in] {
+        background-color: transparent;
+        height: 70px;
+        color: $text-color;;
+        font-size: 26px;
+        }
+    
+        input[id=sign-up] {
+        background-color: transparent;
+        height: 70px;
+        font-size: 26px;
+        color: $text-color;
+        animation: color 5s infinite;
+        }
+    }
 }
-  
-.logo {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    margin-top: 10vh;
-}
-  
-img[id=logo] {
-    height: 130px;
-    width: 130px;
-}
-  
-#logo {
-    animation: rotation 10s infinite linear;
-}
-  
-@keyframes rotation {
+
+@keyframes logo {
     from {
       transform: rotate(0deg);
     }
@@ -35,62 +110,8 @@ img[id=logo] {
       transform: rotate(359deg);
     }
 }
-.login {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 2;
-    margin-left: 8vw;
-    margin-top: 10vh;
-    font-family: Arial, Helvetica, sans-serif;
-}
-  
-input[id=email] {
-    padding: 8px;
-    margin-left: 6.2vw;
-    font-style: italic;
-    font-size: 18px;
-    border: 1px solid black;
-    width: 70%;
-    flex: 1;
-}
-  
-input[id=pass] {
-    padding: 8px;
-    margin-left: 6.3vw;
-    font-style: italic;
-    font-size: 18px;
-    border: 1px solid black;
-    width: 70%;
-    flex: 1;
-}
-  
-.forgot {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
-    margin-right: 18vw;
-    margin-top: 2vh;
-    color: white;
-    font-size: 20px;
-}
-  
-.icon {
-    display: flex;
-    justify-content: space-around;
-    flex: 1;
-}
-  
-img[id=facebook-login-btn] {
-    width: 75px;
-    height: 75px;
-}
-  
-#facebook-login-btn {
-    animation: rotation 10s infinite linear;
-}
-  
-@keyframes rotation {
+ 
+@keyframes facebook {
     from {
       transform: rotate(0deg);
     }
@@ -98,16 +119,8 @@ img[id=facebook-login-btn] {
       transform: rotate(359deg);
     }
 }
-img[id=google-login-btn] {
-    width: 75px;
-    height: 75px;
-}
-  
-  #google-login-btn {
-    animation: rotation 10s infinite linear;
-}
-  
-@keyframes rotation {
+
+@keyframes google {
     from {
       transform: rotate(0deg);
     }
@@ -115,22 +128,9 @@ img[id=google-login-btn] {
       transform: rotate(359deg);
     }
 }
-.join {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-  
-input[id=sign-in] {
-    background-color: transparent;
-    height: 70px;
-    color: white;
-    font-size: 26px;
-}
-  
-input[id=sign-up] {
-    background-color: transparent;
-    height: 70px;
-    font-size: 26px;
-    color: white;
+
+@keyframes color{
+    100%{background-image: linear-gradient(to right,#06353d,#242a42,#fffe2c,#060606,#07383a,#263c64,#060606, #723f18,#2f5371,#252729,#c8943d,#060606,#08222b);
+    }
+
 }

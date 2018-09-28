@@ -18,9 +18,37 @@
   font-family: "Montserrat-Black";
   src: url(../fonts/Montserrat/Montserrat-Black.ttf);
 }
-body {
-  margin: 0;
-  padding: 0;
+.chatBody .footer, .chatBody .header .user, .chatBody .header, .chatBody, .sign-up-box .sign-up-logo, .box .logo {
+  display: flex;
+  justify-content: center;
+}
+
+.sign-up-box .sign-up, .box .join {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up-box, .box .login, .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chatBody .header .callIcon, .box .icon {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chatBody, .sign-up-box, .box {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sign-up-box .sign-up input[id=password-confirmation], .sign-up-box .sign-up input[id=password], .sign-up-box .sign-up input[id=email], .box .login input[id=pass] {
+  border: 1px solid black;
+  font-style: italic;
+  font-size: 18px;
 }
 
 body {
@@ -36,35 +64,28 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.name {
+.Loading-screen .name {
   font-size: 60px;
   font-weight: bold;
-  color: #fff;
+  color: white;
   animation: bar 700ms ease infinite alternate-reverse;
 }
-
-.Loading-screen div:nth-child(2) {
+.Loading-screen .name:nth-child(2) {
   animation-delay: 200ms;
 }
-
-.Loading-screen div:nth-child(3) {
+.Loading-screen .name:nth-child(4) {
   animation-delay: 400ms;
 }
-
-.Loading-screen div:nth-child(4) {
+.Loading-screen .name:nth-child(5) {
   animation-delay: 600ms;
 }
-
-.Loading-screen div:nth-child(5) {
+.Loading-screen .name:nth-child(6) {
   animation-delay: 800ms;
 }
-
-.Loading-screen div:nth-child(6) {
+.Loading-screen .name:nth-child(7) {
   animation-delay: 1000ms;
 }
-
-.Loading-screen div:nth-child(7) {
+.Loading-screen .name:nth-child(8) {
   animation-delay: 1200ms;
 }
 
@@ -79,53 +100,29 @@ body {
   }
 }
 .box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
   width: 100vw;
   background-image: url("../images/background2.jpg");
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
 }
-
-.logo {
-  display: flex;
-  justify-content: center;
+.box .logo {
   flex: 1;
   margin-top: 10vh;
 }
-
-img[id=logo] {
+.box .logo img[id=logo] {
   height: 130px;
   width: 130px;
 }
-
-#logo {
-  animation: rotation 10s infinite linear;
+.box .logo #logo {
+  animation: logo 10s infinite;
 }
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.box .login {
   flex: 2;
   margin-left: 8vw;
   margin-top: 10vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-input[id=email] {
+.box .login input[id=email] {
   padding: 8px;
   margin-left: 6.2vw;
   font-style: italic;
@@ -134,18 +131,13 @@ input[id=email] {
   width: 70%;
   flex: 1;
 }
-
-input[id=pass] {
+.box .login input[id=pass] {
   padding: 8px;
   margin-left: 6.3vw;
-  font-style: italic;
-  font-size: 18px;
-  border: 1px solid black;
   width: 70%;
   flex: 1;
 }
-
-.forgot {
+.box .login .forgot {
   display: flex;
   justify-content: flex-end;
   flex: 1;
@@ -154,23 +146,41 @@ input[id=pass] {
   color: white;
   font-size: 20px;
 }
-
-.icon {
-  display: flex;
-  justify-content: space-around;
+.box .icon {
   flex: 1;
 }
-
-img[id=facebook-login-btn] {
+.box .icon img[id=facebook-login-btn] {
   width: 75px;
   height: 75px;
 }
-
-#facebook-login-btn {
-  animation: rotation 10s infinite linear;
+.box .icon #facebook-login-btn {
+  animation: facebook 10s infinite;
+}
+.box .icon img[id=google-login-btn] {
+  width: 75px;
+  height: 75px;
+}
+.box .icon #google-login-btn {
+  animation: google 10s infinite;
+}
+.box .join {
+  flex: 1;
+}
+.box .join input[id=sign-in] {
+  background-color: transparent;
+  height: 70px;
+  color: white;
+  font-size: 26px;
+}
+.box .join input[id=sign-up] {
+  background-color: transparent;
+  height: 70px;
+  font-size: 26px;
+  color: white;
+  animation: color 5s infinite;
 }
 
-@keyframes rotation {
+@keyframes logo {
   from {
     transform: rotate(0deg);
   }
@@ -178,16 +188,7 @@ img[id=facebook-login-btn] {
     transform: rotate(359deg);
   }
 }
-img[id=google-login-btn] {
-  width: 75px;
-  height: 75px;
-}
-
-#google-login-btn {
-  animation: rotation 10s infinite linear;
-}
-
-@keyframes rotation {
+@keyframes facebook {
   from {
     transform: rotate(0deg);
   }
@@ -195,229 +196,173 @@ img[id=google-login-btn] {
     transform: rotate(359deg);
   }
 }
-.join {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+@keyframes google {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
-
-input[id=sign-in] {
-  background-color: transparent;
-  height: 70px;
-  color: white;
-  font-size: 26px;
+@keyframes color {
+  100% {
+    background-image: linear-gradient(to right, #06353d, #242a42, #fffe2c, #060606, #07383a, #263c64, #060606, #723f18, #2f5371, #252729, #c8943d, #060606, #08222b);
+  }
 }
-
-input[id=sign-up] {
-  background-color: transparent;
-  height: 70px;
-  font-size: 26px;
-  color: white;
-}
-
 .sign-up-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
   width: 100vw;
   background-image: url("../images/background4.jpg");
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
-
-.sign-up-logo {
-  display: flex;
-  justify-content: center;
-  flex: 4;
-  margin-top: 10vh;
-}
-
-img[id=sign-up-logo] {
-  height: 130px;
-  width: 150px;
-}
-
-#sign-up-logo {
-  animation: rotation 10s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-.sign-up {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex: 4;
-  margin-left: 8vw;
-  margin-bottom: 20vh;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-input[id=email] {
-  border: 0px;
-  padding: 8px;
-  margin-left: 6.2vw;
-  font-style: italic;
-  font-size: 18px;
-  border: 1px solid black;
-  width: 70%;
-}
-
-input[id=password] {
-  padding: 8px;
-  margin-left: 6.3vw;
-  font-style: italic;
-  font-size: 18px;
-  border: 1px solid black;
-  width: 70%;
-}
-
-input[id=password-confirmation] {
-  padding: 8px;
-  margin-left: 6.3vw;
-  font-style: italic;
-  font-size: 18px;
-  border: 1px solid black;
-  width: 70%;
-}
-
-button[id=sign-up] {
-  background-color: transparent;
-  font-size: 26px;
-  color: white;
-  flex: 1;
-}
-
-.go-back {
+.sign-up-box .go-back {
   cursor: pointer;
   position: absolute;
   padding: 10px;
   left: 0;
   top: 0;
 }
-
-.go-back svg:hover {
+.sign-up-box .go-back svg:hover {
   fill: #441003;
 }
-
-.go-back svg {
+.sign-up-box .go-back svg {
   height: 30px;
   width: 30px;
-  fill: #fff;
+  fill: white;
+}
+.sign-up-box .sign-up-logo {
+  flex: 4;
+  margin-top: 10vh;
+}
+.sign-up-box .sign-up-logo img[id=sign-up-logo] {
+  height: 130px;
+  width: 150px;
+}
+.sign-up-box .sign-up-logo #sign-up-logo {
+  animation: signUpLogo 10s infinite;
+}
+.sign-up-box .sign-up {
+  justify-content: space-around;
+  flex: 4;
+  margin-left: 8vw;
+  margin-bottom: 20vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sign-up-box .sign-up input[id=email] {
+  border: 0px;
+  padding: 8px;
+  margin-left: 6.2vw;
+  width: 70%;
+}
+.sign-up-box .sign-up input[id=password] {
+  padding: 8px;
+  margin-left: 6.3vw;
+  width: 70%;
+}
+.sign-up-box .sign-up input[id=password-confirmation] {
+  padding: 8px;
+  margin-left: 6.3vw;
+  width: 70%;
+}
+.sign-up-box button[id=sign-up] {
+  background-color: transparent;
+  font-size: 26px;
+  color: white;
+  flex: 1;
 }
 
+@keyframes signUpLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 .chatBody {
   margin: 0;
-  display: flex;
-  justify-content: center;
   background-image: url("../images/background3.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
 }
-
-.header {
+.chatBody .header {
   height: 8vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
   background-color: transparent;
   border: 1px solid white;
   box-sizing: border-box;
 }
-
-.user {
+.chatBody .header .user {
   flex: 4;
-  display: flex;
-  justify-content: center;
   align-items: center;
   margin-left: 10px;
 }
-
-.user .userName {
-  flex: 3;
-  font-size: 35px;
-  font-weight: bold;
-  color: #17d1d1;
-}
-
-.user .userImage {
+.chatBody .header .user .userImage {
   flex: 1;
 }
-
-.user .userImage input {
+.chatBody .header .user .userImage input {
   height: 4vh;
   width: 6vw;
   border: 1px solid #17d1d1;
   border-radius: 50%;
 }
-
-.callIcon {
+.chatBody .header .user .userName {
   flex: 3;
-  display: flex;
-  justify-content: space-around;
+  font-size: 35px;
+  font-weight: bold;
+  color: #17d1d1;
+}
+.chatBody .header .callIcon {
+  flex: 3;
   align-items: center;
 }
-
-.callIcon .audio input {
+.chatBody .header .callIcon .audio input {
   height: 4vh;
   width: 6vw;
 }
-
-.callIcon .video input {
+.chatBody .header .callIcon .video input {
   height: 4vh;
   width: 6vw;
 }
-
-.callIcon .sign-out input {
+.chatBody .header .callIcon .sign-out input {
   height: 4vh;
   width: 7vw;
 }
-
-.chat-messages {
+.chatBody .chat-messages {
   height: 86vh;
   width: 100vw;
   color: white;
   font-size: 24px;
   overflow-y: auto;
 }
-
-.footer {
+.chatBody .footer {
   width: 100vw;
   height: 6vh;
-  display: flex;
-  justify-content: center;
 }
-
-input[id=chat-input-msg] {
+.chatBody .footer input[id=chat-input-msg] {
   flex: 4;
   color: white;
   background-color: transparent;
   font-size: 18px;
 }
-
-button {
+.chatBody .footer button {
   flex: 1;
   background-color: transparent;
 }
-
-img[id=send] {
+.chatBody .footer button img[id=send] {
   height: 5vh;
   width: 50%;
 }
 
 .bubble {
   min-width: 80px;
+}
+
+.msg-name {
+  margin: 0px 10px;
+  color: white;
 }
 
 .msg-bubble-left {
@@ -430,7 +375,6 @@ img[id=send] {
   border-radius: 0px 10px 10px 10px;
   margin-left: 30px;
 }
-
 .msg-bubble-left:before {
   content: "";
   position: absolute;
@@ -442,7 +386,6 @@ img[id=send] {
   border-right: 16px solid #165d68;
   border-bottom: 20px solid transparent;
 }
-
 .msg-bubble-left .msg-date-time {
   font-size: 10px;
   position: absolute;
@@ -462,7 +405,6 @@ img[id=send] {
   border-radius: 10px 0px 10px 10px;
   margin-right: 30px;
 }
-
 .msg-bubble-right:after {
   content: "";
   position: absolute;
@@ -474,17 +416,6 @@ img[id=send] {
   border-left: 16px solid #165d68;
   border-bottom: 20px solid transparent;
 }
-
-.msg-name {
-  margin: 0px 10px;
-  color: #fff;
-}
-
-.msg-date-time {
-  font-size: 10px;
-  margin-bottom: 0;
-}
-
 .msg-bubble-right .msg-date-time {
   font-size: 10px;
   position: absolute;

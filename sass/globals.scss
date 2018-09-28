@@ -1,42 +1,38 @@
 $primary-color: black;
-$secondary-color: #17d1d1;
+$secondary-color: #165d68;
 $accent-color: #470303;
 $text-color: white;
 
-body {
-   margin: 0;
-   padding: 0;
- }
 
- %flex-center {
-   display: flex;
-   justify-content: center;
- }
 
- %user-pass {
-   background-color: #47169e96;
-   font-family: "Montserrat", sans-serif;
-   border-bottom: 1px solid black;
-   border-top: 0;
-   border-left: 0;
-   border-right: 0;
-   font-size: 19px;
-   color: white;
-   height: 7vh;
- }
+%flex-center {
+  display: flex;
+  justify-content: center;
+}
 
- %sign_in_up {
-   flex: 1;
-   font-size: 19px;
-   font-weight: bold;
-   font-family: "Montserrat", sans-serif;
- }
+%flex-column{
+  display: flex;
+  flex-direction: column;
+}
 
- %email_pass {
-   font-family: "Montserrat", sans-serif;
-   border-bottom: 1px solid black;
-   border-top: 0;
-   border-left: 0;
-   border-right: 0;
-   font-size: 19px;
+%flex-space-between{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+%flex-space-around{
+  display: flex;
+  justify-content: space-around;
+}
+
+%background{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ %style{
+  border: 1px solid black;
+  font-style: italic;
+  font-size: 18px;
  }
