@@ -169,15 +169,17 @@ body {
 .box .join input[id=sign-in] {
   background-color: transparent;
   height: 70px;
-  color: white;
+  color: #ffff;
+  font-weight: bold;
   font-size: 26px;
 }
 .box .join input[id=sign-up] {
   background-color: transparent;
   height: 70px;
+  font-weight: bold;
   font-size: 26px;
-  color: white;
-  animation: color 5s infinite;
+  color: #ffff;
+  animation: color 3s infinite;
 }
 
 @keyframes logo {
@@ -206,7 +208,7 @@ body {
 }
 @keyframes color {
   100% {
-    background-image: linear-gradient(to right, #06353d, #242a42, #fffe2c, #060606, #07383a, #263c64, #060606, #723f18, #2f5371, #252729, #c8943d, #060606, #08222b);
+    background-image: linear-gradient(to right, #06353d #afbcc0, #242a42, #fffe2c, #060606, #07383a, #263c64, #060606, #afbcc0, #723f18, #2f5371, #252729, #c8943d, #060606, #08222b);
   }
 }
 .sign-up-box {
@@ -266,9 +268,11 @@ body {
 }
 .sign-up-box button[id=sign-up] {
   background-color: transparent;
+  font-weight: bold;
   font-size: 26px;
-  color: white;
+  color: #ffff;
   flex: 1;
+  animation: button 3s infinite;
 }
 
 @keyframes signUpLogo {
@@ -277,6 +281,11 @@ body {
   }
   to {
     transform: rotate(359deg);
+  }
+}
+@keyframes button {
+  100% {
+    background-image: linear-gradient(to right, #0b3035, #afbcc0, #212f36, #0d2934, #afbcc0, #1f4046, #293339, #afbcc0);
   }
 }
 .chatBody {
@@ -331,7 +340,7 @@ body {
   width: 7vw;
 }
 .chatBody .chat-messages {
-  height: 86vh;
+  height: 84vh;
   width: 100vw;
   color: white;
   font-size: 24px;
@@ -339,7 +348,7 @@ body {
 }
 .chatBody .footer {
   width: 100vw;
-  height: 6vh;
+  height: 8vh;
 }
 .chatBody .footer input[id=chat-input-msg] {
   flex: 4;

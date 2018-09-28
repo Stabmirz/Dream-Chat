@@ -64,7 +64,7 @@
     }
 
     .chat-messages {
-        height: 86vh;
+        height: 84vh;
         width: 100vw;
         color: $text-color;
         font-size: 24px;
@@ -73,7 +73,7 @@
     
     .footer {
     width: 100vw;
-    height: 6vh;
+    height: 8vh;
     @extend %flex-center;
 
     input[id=chat-input-msg] {

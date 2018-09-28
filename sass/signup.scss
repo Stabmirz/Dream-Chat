@@ -73,9 +73,11 @@
 
     button[id=sign-up] {
         background-color: transparent;
+        font-weight: bold;
         font-size: 26px;
-        color: $text-color;;
+        color: $accent-color;
         flex: 1;
+        animation: button 3s infinite;
     }
 }
   
@@ -85,5 +87,10 @@
     }
     to {
       transform: rotate(359deg);
+    }
+}
+
+@keyframes button{
+    100%{background-image: linear-gradient(to right,#0b3035,#afbcc0,#212f36,#0d2934,#afbcc0,#1f4046,#293339,#afbcc0);
     }
 }
