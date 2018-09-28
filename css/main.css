@@ -172,6 +172,7 @@ body {
   color: #ffff;
   font-weight: bold;
   font-size: 26px;
+  animation: signIn 2s infinite;
 }
 .box .join input[id=sign-up] {
   background-color: transparent;
@@ -179,7 +180,7 @@ body {
   font-weight: bold;
   font-size: 26px;
   color: #ffff;
-  animation: color 3s infinite;
+  animation: signUp 2s infinite;
 }
 
 @keyframes logo {
@@ -206,9 +207,14 @@ body {
     transform: rotate(359deg);
   }
 }
-@keyframes color {
+@keyframes signIn {
   100% {
-    background-image: linear-gradient(to right, #06353d #afbcc0, #242a42, #fffe2c, #060606, #07383a, #263c64, #060606, #afbcc0, #723f18, #2f5371, #252729, #c8943d, #060606, #08222b);
+    background-image: linear-gradient(to right, #afbcc0, #0b3035, #1f2d5b, #afbcc0, #449196, #212f36, #0d2934, #449196, #1f2d5b, #1f4046, #293339);
+  }
+}
+@keyframes signUp {
+  100% {
+    background-image: linear-gradient(to left, #afbcc0, #0b3035, #1f2d5b, #afbcc0, #449196, #212f36, #0d2934, #449196, #1f2d5b, #1f4046, #293339);
   }
 }
 .sign-up-box {
@@ -272,7 +278,7 @@ body {
   font-size: 26px;
   color: #ffff;
   flex: 1;
-  animation: button 3s infinite;
+  animation: button 2s infinite;
 }
 
 @keyframes signUpLogo {
@@ -319,7 +325,7 @@ body {
 }
 .chatBody .header .user .userName {
   flex: 3;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   color: #17d1d1;
 }
@@ -343,7 +349,7 @@ body {
   height: 84vh;
   width: 100vw;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   overflow-y: auto;
 }
 .chatBody .footer {

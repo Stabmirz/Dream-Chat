@@ -91,6 +91,7 @@
         color: $accent-color;
         font-weight: bold;
         font-size: 26px;
+        animation: signIn 2s infinite;
         }
     
         input[id=sign-up] {
@@ -99,7 +100,7 @@
         font-weight: bold;
         font-size: 26px;
         color: $accent-color;
-        animation: background 3s infinite;
+        animation: signUp 2s infinite;
         }
     }
 }
@@ -131,8 +132,11 @@
     }
 }
 
-@keyframes background{
-    100%{
-        background-image: linear-gradient(to right,#06353d,#afbcc0,#242a42,#fffe2c,#060606,#07383a,#263c64,#2f5371,#252729,#c8943d,#08222b);
+@keyframes signIn{
+    100%{background-image: linear-gradient(to right,#afbcc0,#0b3035,#1f2d5b,#afbcc0,#449196,#212f36,#0d2934,#449196,#1f2d5b,#1f4046,#293339);
+    }
+}
+@keyframes signUp{
+    100%{background-image: linear-gradient(to left,#afbcc0,#0b3035,#1f2d5b,#afbcc0,#449196,#212f36,#0d2934,#449196,#1f2d5b,#1f4046,#293339);
     }
 }
