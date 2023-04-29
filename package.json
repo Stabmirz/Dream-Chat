@@ -10,6 +10,6 @@
   "author": "Mirza",
   "license": "ISC",
   "devDependencies": {
-    "reload": "^2.3.1"
+    "reload": "^3.2.1"
   }
 }
